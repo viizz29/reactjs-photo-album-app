@@ -29,6 +29,7 @@ const PageLayout = () => {
 
   const menuItems = [
     { label: "Home", path: "/" },
+    { label: "Photos", path: "/photos" },
     { label: "Albums", path: "/albums" },
   ];
 

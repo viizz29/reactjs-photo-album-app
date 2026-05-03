@@ -1,6 +1,21 @@
 import api from "./client";
 
 
+export interface ImageRecord {
+    "id": string;
+  "filename": string;
+}
+
+export interface ImageWithCommentary {
+  "id": string;
+  "filename": string;
+  "contentType": string;
+  "createdAt": string;
+  "commentary": string;
+}
+
+
+
 export const uploadFileApi = async (
   file: File,
   onUploadProgress?: (progress: number) => void,
@@ -23,13 +38,17 @@ export const uploadFileApi = async (
 };
 
 
-export interface ImageWithCommentary {
-  "id": string;
-  "filename": string;
-  "contentType": string;
-  "createdAt": string;
-  "commentary": string;
-}
+type ApiResponse = {
+  items: ImageRecord[];
+  nextCursorId: string | null;
+};
+
+export const getImages = async ({ pageParam = null, search = null }: { pageParam: string | null, search: string | null }): Promise<ApiResponse> => {
+  const res = await api.get("/v1/images", {
+    params: { cursorId: pageParam, search },
+  });
+  return res.data;
+};
 
 export const getRandomImage = async (): Promise<ImageWithCommentary> => {
   const res = await api.get("/v1/images/random");

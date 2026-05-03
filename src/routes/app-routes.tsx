@@ -4,12 +4,14 @@ import { useAuth } from "../auth/use-auth";
 
 // Layout
 import MainLayout from "../components/layouts/main-layout";
-import AlbumsPage from "@/features/explore/explore";
+import AlbumsPage from "@/features/albums/albums";
+import PhotosPage from "@/features/photos/photos";
+import AlbumPage from "@/features/album/album";
 
 // Lazy pages (code splitting)
 const Home = lazy(() => import("../features/home/home"));
 const Login = lazy(() => import("../features/auth/login"));
-const Dashboard = lazy(() => import("../features/explore/explore"));
+const Dashboard = lazy(() => import("../features/albums/albums"));
 const NotFound = lazy(() => import("../features/misc/not-found"));
 
 // 🔐 Private Route Wrapper
@@ -56,6 +58,8 @@ export default function AppRoutes() {
           {/* Nested routes */}
           <Route index element={<Home />} />
           <Route path="/albums" element={<AlbumsPage />} />
+          <Route path="/photos" element={<PhotosPage />} />
+          <Route path="/album/:id?" element={<AlbumPage />} />
 
         </Route>
 

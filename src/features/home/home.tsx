@@ -1,7 +1,7 @@
 import { getRandomImage } from "@/api/image-apis";
 import { getPersons, updatePersonName, type Person } from "@/api/person-apis";
 import FileUploadModal from "@/features/home/file-upload-modal";
-import ImageComponent from "@/features/home/image-with-commentary";
+import ImageComponent from "@/features/home/image-component";
 import PersonNameUpdateModal from "@/features/home/name-update-modal";
 import PersonFace from "@/features/home/person-face-component";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
