@@ -1,11 +1,14 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  build: {
+    outDir: ".build",
+  },
   plugins: [react()],
   optimizeDeps: {
-    include: ["lottie-react"]
+    include: ["lottie-react"],
   },
 
   resolve: {

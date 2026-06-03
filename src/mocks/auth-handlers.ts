@@ -1,18 +1,20 @@
 import { http, HttpResponse } from "msw";
 
-interface User32 {
-  email: string;
-  password: string;
-}
+// interface User32 {
+//   email: string;
+//   password: string;
+// }
 
 // fake DB
-const users = [
-  { id: 1, email: "admin@test.com", password: "1234", role: "admin" },
-];
+// const users = [
+//   { id: 1, email: "admin@test.com", password: "1234", role: "admin" },
+// ];
 
 // 🔐 LOGIN
-const login = http.post("/api/v1/auth/login", async ({ request }) => {
-  const body = (await request.json()) as User32;
+const login = http.post("/api/v1/auth/login", async ({ 
+  // request
+ }) => {
+  // const body = (await request.json()) as User32;
 
   // const user = users.find(
   //   (u) => u.email === body.email && u.password === body.password

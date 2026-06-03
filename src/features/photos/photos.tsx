@@ -18,7 +18,9 @@ export default function PhotosPage() {
     mutationFn: ({ title }: { title: string }) =>
       createAlbum({ title, search: searchTerm }),
 
-    onSuccess: (data) => {
+    onSuccess: (
+      // data
+    ) => {
       toast.info(`New album created!`);
       queryClient.invalidateQueries({ queryKey: ["albums"] });
     },

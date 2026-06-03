@@ -7,7 +7,6 @@ import {
   MenuItem,
   Typography,
 } from "@mui/material";
-import ProfileLogo from "../../assets/react.svg";
 import { useAuth } from "../../auth/use-auth";
 import { useTranslation } from "react-i18next";
 

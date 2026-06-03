@@ -11,7 +11,7 @@ import AlbumPage from "@/features/album/album";
 // Lazy pages (code splitting)
 const Home = lazy(() => import("../features/home/home"));
 const Login = lazy(() => import("../features/auth/login"));
-const Dashboard = lazy(() => import("../features/albums/albums"));
+// const Dashboard = lazy(() => import("../features/albums/albums"));
 const NotFound = lazy(() => import("../features/misc/not-found"));
 
 // 🔐 Private Route Wrapper

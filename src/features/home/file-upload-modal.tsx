@@ -1,7 +1,7 @@
 
 import GenericModal from "@/components/modals/generic-modal";
 import FileUploadForm from "@/features/home/file-upload-form";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 
 interface NoteEditingModalProps {
@@ -12,7 +12,7 @@ interface NoteEditingModalProps {
 
 
 export default function FileUploadModal({ open, onClose, title }: NoteEditingModalProps) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
 

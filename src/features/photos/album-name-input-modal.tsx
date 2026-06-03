@@ -1,6 +1,6 @@
 import DynamicForm from "@/components/forms/dynamic-form";
 import GenericModal from "@/components/modals/generic-modal";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import * as Yup from 'yup';
 
 
@@ -12,7 +12,7 @@ interface AlbumTitleInputModalProps {
 
 
 export default function AlbumTitleInputModal({ open, onClose, onSubmit }: AlbumTitleInputModalProps) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   const fields = ['title',];
 

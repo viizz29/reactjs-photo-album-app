@@ -54,10 +54,9 @@ export default function DynamicForm({
       flexDirection="column"
       gap={2}
     >
-      {fields.map((field, index) => (
+      {fields.map((field) => (
         <TextField
           key={field}
-          inputRef={(el: HTMLInputElement | null) => (fieldRefs.current[index] = el)}
           label={field}
           {...formik.getFieldProps(field)}
           error={formik.touched[field] && Boolean(formik.errors[field])}

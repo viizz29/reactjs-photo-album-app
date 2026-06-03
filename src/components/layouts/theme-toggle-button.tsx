@@ -1,6 +1,6 @@
 import { useStorage } from "@/components/misc/local-storage-provider";
 import { useThemeController } from "@/theme/theme-context";
-import { Button, IconButton, Tooltip } from "@mui/material";
+import { IconButton, Tooltip } from "@mui/material";
 import { useEffect, useState } from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
@@ -8,7 +8,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 export const ThemeToggleButton = () => {
     const { toggleTheme } = useThemeController();
     const [darkMode, setDarkMode] = useState(false);
-    const { get, set, remove } = useStorage();
+    const { get } = useStorage();
 
     useEffect(() => {
         const root = document.documentElement;
@@ -22,10 +22,10 @@ export const ThemeToggleButton = () => {
     }, [darkMode]);
 
 
-    const toggleMode = () => {
-        setDarkMode(!darkMode);
-        set("mode", !darkMode ? "dark" : "light");
-    }
+    // const toggleMode = () => {
+    //     setDarkMode(!darkMode);
+    //     set("mode", !darkMode ? "dark" : "light");
+    // }
 
 
     useEffect(() => {

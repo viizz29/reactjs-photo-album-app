@@ -1,6 +1,6 @@
-import { getAlbum, getAlbums } from "@/api/album-apis";
-import { useQuery } from "@tanstack/react-query";
-import { Box, Alert, Paper } from "@mui/material";
+// import { getAlbum } from "@/api/album-apis";
+// import { useQuery } from "@tanstack/react-query";
+import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
 import AlbumImageListGrid from "@/features/album/album-image-list-grid";
 
@@ -8,12 +8,12 @@ export default function AlbumPage() {
   const { id } = useParams();
 
 
-  const {
-    data: album,
-  } = useQuery({
-    queryKey: ["album", id],
-    queryFn: () => getAlbum(id)
-  });
+  // const {
+  //   data: album,
+  // } = useQuery({
+  //   queryKey: ["album", id],
+  //   queryFn: () => getAlbum(id)
+  // });
 
 
   return <Box
